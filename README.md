@@ -1,24 +1,16 @@
-# Gaming company's website - template
-> Simple website template created with Bootstrap, SASS, HTML and JavaScript.
+# Sea resort landing page
+> A simple landing page created with Bootstrap, SASS, HTML and JavaScript with libraries.
 
 ## General info
-The motivation and goal for this project was to expand knowledge of Bootstrap, usage of JS libraries and CSS preprocessors. This site was one of my first projects realized with this technologies.
+The site was made from a scratch by me with my own design.
 
-## Setup
-Here's link to the demo: https://wauk33.github.io/MyRepo/bootstrap%20RWD%20Gaming%20website/
+## Preview
+https://wauk33.github.io/LP_SeaResort
 > Hosted on GitHub Pages
 
 ## Features
-
-* Created with new technologies
-* Responsive Web Design
+* RWD
 
 To-do list:
-* Repair issues of improper displaying background images on various mobile devices
-
-## Status
-Project is: _in progress_, 
-
-## Inspiration
-Project is made by myself, inspired by author of online courses.
-
+* Repair issues with not correct displaying background images on mobile devices
+* Optimize and improve performance
