@@ -9,7 +9,7 @@ https://wauk33.github.io/LP_SeaResort
 > Hosted on GitHub Pages
 
 ## Features
-* Responsive Web Design
+* RWD
 
 To-do list:
 * Repair issues with not correct displaying background images on mobile devices
