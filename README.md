@@ -9,8 +9,9 @@ https://wauk33.github.io/LP_SeaResort
 > Hosted on GitHub Pages
 
 ## Features
-* Responsive for vertical mobile
+* Responsive for vertical mobile view
 
 To-do list:
 * Repair issues with not correct displaying background images on mobile devices
 * Optimize and improve performance
+* Responsivness for tablets and bigger displays
