@@ -18,11 +18,11 @@ body
 #navbar
     user-select: none
     height: 55px
+    background-color: $maincolor
     .navbar-nav
         align-items: center
         a 
             color: #202020e5
-            text-transform:
             i
                 display: flex
                 justify-content: center
@@ -46,7 +46,9 @@ body
         .nav-item
             padding: 0px 25px 0px 25px
         .nav-brand-hide
-            display: none !important
+            display: none 
+    .navbar-logo
+        display: none
 
 header
     user-select: none
@@ -77,27 +79,25 @@ header
         z-index: 25
         width: 100%
         height: 100vh
-    .home-socialmedia
+    .home-socialmediabox
         display: flex
-        justify-content: center
-        align-items: center
         align-self: flex-end
-        flex-flow: column nowrap
-        flex: 4
-        position: absolute
-        width: 60px
-        height: 60px
-        background-color: #2327fa96
-        font-size: 32px
-        border-top-left-radius: 10px
-        border-bottom-left-radius: 10px
-        margin-top: -25rem
-        transition: width 0.2s
-        i
-            color: $maincolor
-    .home-socialmedia:hover
-        width: 70px
-        background-color: #2024ffb4
+        .home-socialmedia
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 60px
+            height: 60px
+            background-color: 	#3b5998
+            font-size: 32px
+            border-top-left-radius: 10px
+            border-bottom-left-radius: 10px
+            transition: width 0.2s
+            i
+                color: $maincolor
+        .home-socialmedia:hover
+            width: 70px
+            background-color: #2024ffb4
 
   
     .home-container-header
@@ -165,7 +165,7 @@ header
                 text-decoration: none
                 .oferta-header
                     width: 100vw
-                    height: 170px
+                    height: 190px
                     display: flex
                     justify-content: center
                     align-items: center
@@ -218,7 +218,6 @@ header
         background-color: rgba(0, 0, 0, 0.288)
         z-index: 0
         position: absolute
-        margin-top: -55px
     .oferta-heading
         width: 100%
         height: 250px
@@ -355,25 +354,30 @@ header
                 align-items: center
                 height: 250px
                 .image
-                    box-shadow: -5px 5px 5px grey
+                    box-shadow: -10px 10px 10px #a1a1a1
                     margin: 10px
                     padding: 0px
-                    transition: box-shadow 0.3s
                     img
+                        border: 2px white solid
                         width: 100%
                         height: 200px
                         object-fit: cover
+                        transition: height 0.4s
+                    img:hover
+                        height: 250px
                 .image:hover
-                    box-shadow: -3px 3px 5px $secondarycolor
+
+    .gallery-carousel
+        display: none
 #onas
     user-select: none
     width: 100%
-    height: 500px
     display: flex
     jusfify-content: center
     align-items: center
     flex-flow: column nowrap
     .onas-header
+        position: absolute
         width: 100%
         height: 200px
         display: flex
@@ -389,24 +393,24 @@ header
         font-size: 90px
     .onas-wall
         width: 100%
+    .onas-items
+        margin-top: 15rem
     .onas-shadow
         width: 100%
-        height: 440px
+        height: 600px
         background-color: rgba(0, 0, 0, 0.288)
-        z-index: -1
+        z-index: 1
         position: absolute
     .onas-containervideo
+        height: 600px
         width: 100%
-        margin-top: -200px
-    .onas-video
         z-index: -100
         filter: contrast(120%)
-        overflow: hidden !important
+        overflow: hidden
         video
-            margin-top: 40px
+            height: 600px
             width: 100%
             object-fit: cover
-            height: 450px
             z-index: -100
 
     .onas-items
@@ -442,7 +446,6 @@ header
 
 #lokalizacja
     .lokalizacja-heading
-            margin-top: -33px
             height: 185px
             background-color: $maincolor
             padding: 0
@@ -450,13 +453,13 @@ header
             flex-flow: column nowrap
             justify-content: center
             align-items: center
+            margin-bottom: 0
             h2
                 display: flex
                 flex-flow: column nowrap
                 justify-content: center
                 align-items: center
                 width: 100%
-                height: 100px
                 z-index: 100
             a
                 font-family: 'Bilbo Swash Caps', cursive
@@ -466,20 +469,19 @@ header
     .lokalizacja-shadow
         position: absolute
         width: 100%
-        height: 450px
+        height: 700px
         background-color: rgba(0,0,0,0.2)
     .lokalizacja-main
-        height: 450px
-        background-image: url("/css/images/krynica1.jpg")
+        height: 700px
+        background-image: url('../css/images/krynica1.jpg')
         background-size: cover
         background-position: center
-        background-attachment: fixed
-        margin-top: -33px
         padding: 0
         display: flex
         justify-content: center
         align-items: center
         flex-flow: row wrap
+        margin-bottom: 0
         iframe
             z-index: 100
             box-shadow: 0px 0px 20px 0px $textcolor
@@ -490,12 +492,12 @@ header
             padding: 30px
             margin: 50px
             background-color: #008bc2e0
+            box-shadow: 0px 0px 20px 0px black
 
 
 #kontakt
     margin-bottom: -2rem
     .kontakt-heading
-            margin-top: -33px
             height: 185px
             background-color: $maincolor
             padding: 0
@@ -524,14 +526,14 @@ header
     .kontakt-shadow
         position: absolute
         width: 100%
-        height: 600px
+        height: 900px
         background-color: rgba(0,0,0,0.2)
     .kontakt-main
-        background-image: url("/css/images/krynica2.jpg")
+        background-image: url('../css/images/krynica2.jpg')
         background-size: cover
         background-position: center
         background-attachment: fixed     
-        height: 600px
+        height: 900px
         margin-top: -33px
         padding: 0
         display: flex
@@ -558,6 +560,7 @@ header
                 text-shadow: 1px 1px black
         .contact
             box-shadow: 0px 0px 20px 0px $textcolor
+            height: 650px
 
 footer
     box-shadow: 0px 0px 10px 1px black

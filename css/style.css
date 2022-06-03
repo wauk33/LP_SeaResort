@@ -26,36 +26,12 @@ body {
 }
 
 #navbar {
-  width: 100vw;
-  background-color: #f9f9f9;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   height: 55px;
-}
-#navbar .navbar-small {
-  width: 100vw;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 10;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  outline: none;
-}
-#navbar .navbar-small .navbar-logo {
-  flex: 8;
-}
-#navbar .navbar-small .navbar-toggler-icon {
-  flex: 2;
-  align-self: center;
-}
-#navbar .navbar-small .navbar-toggler-icon i {
-  font-size: 25px;
+  background-color: #f9f9f9;
 }
 #navbar .navbar-nav {
   align-items: center;
@@ -90,10 +66,10 @@ body {
   padding: 0px 25px 0px 25px;
 }
 #navbar .navbar-nav .nav-brand-hide {
-  display: none !important;
+  display: none;
 }
-#navbar .nav-transparent {
-  background-color: rgba(249, 249, 249, 0.737254902) !important;
+#navbar .navbar-logo {
+  display: none;
 }
 
 header {
@@ -135,32 +111,27 @@ header .home-wall {
   height: 100vh;
 }
 header .home-socialmediabox {
-  right: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: end;
-  flex-flow: column nowrap;
-  width: 57px;
-  height: 57px;
-  background-color: rgba(35, 39, 250, 0.8549019608);
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  position: fixed;
-  z-index: 999;
+  align-self: flex-end;
 }
 header .home-socialmediabox .home-socialmedia {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #3b5998;
   font-size: 32px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: width 0.2s;
 }
 header .home-socialmediabox .home-socialmedia i {
   color: #f9f9f9;
 }
 header .home-socialmediabox .home-socialmedia:hover {
+  width: 70px;
   background-color: rgba(32, 36, 255, 0.7058823529);
-  text-shadow: 1px 1px 5px rgba(206, 206, 206, 0.5960784314);
 }
 header .home-container-header {
   margin-top: 500px;
@@ -228,7 +199,7 @@ header .home-container-para:hover {
   width: 100%;
   height: 430px;
   background-color: rgba(255, 255, 255, 0.7254901961);
-  z-index: 10;
+  z-index: 100;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
@@ -238,7 +209,7 @@ header .home-container-para:hover {
 }
 .oferta .oferta-wall .oferta-head a .oferta-header {
   width: 100vw;
-  height: 200px;
+  height: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,7 +229,7 @@ header .home-container-para:hover {
 .oferta .oferta-wall .oferta-head .oferta-head-hero {
   width: 100%;
   height: auto;
-  margin-top: -5rem;
+  margin-top: -4rem;
 }
 .oferta .oferta-wall .oferta-head .oferta-head-hero img {
   width: 600px;
@@ -296,7 +267,7 @@ header .home-container-para:hover {
   padding: 0px 100px 0px 0px;
   width: 100%;
   color: rgb(41, 41, 41);
-  font-size: 19px;
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
 }
 .oferta .oferta-wall .oferta-head .oferta-paragraph-center {
@@ -310,12 +281,12 @@ header .home-container-para:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.288);
-  z-index: 5;
+  z-index: 0;
   position: absolute;
 }
 .oferta .oferta-heading {
   width: 100%;
-  height: 200px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,7 +301,6 @@ header .home-container-para:hover {
   font-weight: bold;
 }
 .oferta .jumbotron {
-  width: 100%;
   margin-bottom: 2rem;
   z-index: 50;
 }
@@ -435,10 +405,6 @@ header .home-container-para:hover {
   align-items: center;
   z-index: 1000;
   margin-bottom: -2rem;
-  background-color: #f9f9f9;
-}
-#galeria .galeria-jumbotron .gallery-carousel {
-  display: none;
 }
 #galeria .galeria-jumbotron .galeria-header {
   margin-top: -20px;
@@ -472,19 +438,23 @@ header .home-container-para:hover {
   height: 250px;
 }
 #galeria .galeria-jumbotron .galeria-main .row .image {
-  box-shadow: -3px 3px 10px grey;
+  box-shadow: -10px 10px 10px #a1a1a1;
   margin: 10px;
   padding: 0px;
-  transition: box-shadow 0.3s;
 }
 #galeria .galeria-jumbotron .galeria-main .row .image img {
+  border: 2px white solid;
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: height 0.4s;
 }
-#galeria .galeria-jumbotron .galeria-main .row .image:hover {
-  box-shadow: -3px 3px 5px rgb(236, 141, 32);
+#galeria .galeria-jumbotron .galeria-main .row .image img:hover {
+  height: 250px;
+}
+#galeria .gallery-carousel {
+  display: none;
 }
 
 #onas {
@@ -493,13 +463,13 @@ header .home-container-para:hover {
       -ms-user-select: none;
           user-select: none;
   width: 100%;
-  height: 500px;
   display: flex;
   jusfify-content: center;
   align-items: center;
   flex-flow: column nowrap;
 }
 #onas .onas-header {
+  position: absolute;
   width: 100%;
   height: 200px;
   display: flex;
@@ -518,29 +488,28 @@ header .home-container-para:hover {
 #onas .onas-wall {
   width: 100%;
 }
+#onas .onas-items {
+  margin-top: 15rem;
+}
 #onas .onas-shadow {
   width: 100%;
-  height: 445px;
+  height: 600px;
   background-color: rgba(0, 0, 0, 0.288);
   z-index: 1;
   position: absolute;
 }
 #onas .onas-containervideo {
+  height: 600px;
   width: 100%;
-  margin-top: -200px;
-}
-#onas .onas-video {
   z-index: -100;
   filter: contrast(120%);
-  overflow: hidden !important;
-  display: flex;
+  overflow: hidden;
 }
-#onas .onas-video video {
-  margin-top: 40px;
+#onas .onas-containervideo video {
+  height: 600px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 450px;
   z-index: -100;
 }
 #onas .onas-items {
@@ -587,6 +556,7 @@ header .home-container-para:hover {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 #lokalizacja .lokalizacja-heading h2 {
   display: flex;
@@ -594,7 +564,6 @@ header .home-container-para:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100px;
   z-index: 100;
 }
 #lokalizacja .lokalizacja-heading a {
@@ -604,30 +573,26 @@ header .home-container-para:hover {
   font-size: 80px;
 }
 #lokalizacja .lokalizacja-shadow {
-  padding: 0;
-  margin: 0;
   position: absolute;
   width: 100%;
-  height: 450px;
+  height: 700px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 #lokalizacja .lokalizacja-main {
-  height: 450px;
-  background-image: url("./images/krynica1.jpg");
+  height: 700px;
+  background-image: url("../css/images/krynica1.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  margin-top: -33px;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin-bottom: 0;
 }
 #lokalizacja .lokalizacja-main iframe {
   z-index: 100;
   box-shadow: 0px 0px 20px 0px rgb(41, 41, 41);
-  border-radius: 10px;
 }
 #lokalizacja .lokalizacja-main p {
   width: 40%;
@@ -636,13 +601,13 @@ header .home-container-para:hover {
   padding: 30px;
   margin: 50px;
   background-color: rgba(0, 139, 194, 0.8784313725);
+  box-shadow: 0px 0px 20px 0px black;
 }
 
 #kontakt {
   margin-bottom: -2rem;
 }
 #kontakt .kontakt-heading {
-  margin-top: -33px;
   height: 185px;
   background-color: #f9f9f9;
   padding: 0;
@@ -675,15 +640,15 @@ header .home-container-para:hover {
 #kontakt .kontakt-shadow {
   position: absolute;
   width: 100%;
-  height: 600px;
+  height: 900px;
   background-color: rgba(0, 0, 0, 0.2);
 }
 #kontakt .kontakt-main {
-  background-image: url("./images/krynica2.jpg");
+  background-image: url("../css/images/krynica2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 600px;
+  height: 900px;
   margin-top: -33px;
   padding: 0;
   display: flex;
@@ -704,7 +669,6 @@ header .home-container-para:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
   color: black;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3411764706);
 }
 #kontakt .kontakt-main .infocon p {
   font-family: "Montserrat", sans-serif;
@@ -715,11 +679,13 @@ header .home-container-para:hover {
 }
 #kontakt .kontakt-main .contact {
   box-shadow: 0px 0px 20px 0px rgb(41, 41, 41);
+  height: 650px;
 }
+
 footer {
   box-shadow: 0px 0px 10px 1px black;
   width: 100%;
-  height: 30px;
+  height: 50px;
   background-color: black;
   text-align: center;
   color: #ffffff;
@@ -729,7 +695,6 @@ footer {
   flex-flow: column nowrap;
 }
 footer p {
-  font-size: 13px;
   margin-top: 15px;
 }
 footer p a {

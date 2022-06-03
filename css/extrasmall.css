@@ -2,24 +2,36 @@
   height: 80px;
   padding: 0;
 }
+#navbar .navbar-collapse {
+  margin-top: -3px;
+}
 #navbar .navbar-toggler {
   padding: 0;
+  padding-bottom: 0;
+  margin-right: 10px;
   outline: none;
+  line-height: 0;
 }
-#navbar .navbar-small {
-  margin-top: 10px;
+#navbar .navbar-toggler .navbar-small {
   flex-flow: row nowrap;
   display: flex;
-  justify-content: center;
   align-items: center;
+  height: 80px;
 }
-#navbar .navbar-small .navbar-logo img {
-  margin-left: 60px;
+#navbar .navbar-toggler .navbar-small .navbar-toggler-icon {
+  width: 50px;
+}
+#navbar .navbar-logo {
+  display: block;
+}
+#navbar .navbar-logo img {
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 10px;
   width: 135px;
   height: 135px;
 }
 #navbar .navbar-nav {
-  margin-top: 15px;
   background-color: #f9f9f9;
 }
 #navbar .navbar-nav .nav-brand {
@@ -43,24 +55,24 @@
   background-color: rgba(0, 0, 0, 0.3647058824);
 }
 
+header .home-socialmediabox {
+  margin-top: 10rem;
+  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+}
+header .home-socialmediabox .home-socialmedia {
+  font-size: 28px;
+}
 header .carousel-item img {
   height: 100%;
   width: 100%;
   position: relative;
   top: 0;
-  left: 0 !important;
+  left: 0;
   transform: none;
   -o-object-fit: cover;
      object-fit: cover;
-}
-header .home-socialmediabox {
-  margin-top: -100px;
-  width: 45px;
-  height: 45px;
-  position: ABSOLUTE;
-}
-header .home-socialmediabox .home-socialmedia {
-  font-size: 28px;
 }
 header .home-container-header {
   margin-top: 400px;
@@ -68,11 +80,6 @@ header .home-container-header {
 @media screen and (max-height: 600px) {
   header .home-container-header {
     margin-top: 300px;
-  }
-}
-@media screen and (min-height: 750px) {
-  header .home-container-header {
-    margin-top: 600px;
   }
 }
 header .home-container-header h1 {
@@ -97,7 +104,8 @@ header .home-container-para p b {
 
 .oferta .oferta-wall .oferta-heading {
   font-size: 65px;
-  height: 200px;
+  height: 300px;
+  margin-bottom: 50px;
 }
 .oferta .oferta-wall .oferta-head a .oferta-header {
   height: 200px;
@@ -188,7 +196,7 @@ header .home-container-para p b {
   border-radius: 0;
 }
 #galeria .gallery-carousel {
-  display: block !important;
+  display: block;
   width: 90vw;
   justify-content: center;
   align-items: center;
@@ -266,6 +274,9 @@ header .home-container-para p b {
   margin-top: 2rem;
   width: 90%;
   margin-bottom: 4rem;
+}
+#lokalizacja .lokalizacja-shadow {
+  margin-top: 0;
 }
 
 #kontakt .scroll-fix {
